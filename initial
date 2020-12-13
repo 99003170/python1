@@ -1,0 +1,126 @@
+
+class menshopping():
+    def shirt(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*500
+        print("The  cost for shirt is: ", cost)
+        return cost
+
+    def pant(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*300
+        print("The  cost for pant is:", cost)
+        return cost
+
+    def jacket(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*400
+        print("The  cost for jacket is:", cost)
+        return cost
+
+    def spectacles(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*150
+        print("The cost for spectacles is:", cost)
+        return cost
+
+    def watch(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*120
+        print("The cost for watch is:", cost)
+        return cost
+
+    def shoe(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*300
+        print("The cost for watch is:", cost)
+        return cost
+
+    def sliders(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*350
+        print("The cost for sliders is:", cost)
+        return cost
+
+    def bag(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*250
+        print("The cost for bag is:", cost)
+        return cost
+
+    def belt(self):
+        print("Enter the Quantity", end='')
+        quantity = int(input())
+        cost = quantity*200
+        print("The cost for belt is:", cost)
+        return cost
+
+object1 = menshopping()
+price = 0
+print("Please select the necessities that are available")
+print("1 for shirt and the cost is 500/-")
+print("2 for pant and the cost is 300/-")
+print("3 for jacket and the cost is 400/-")
+print("4 for spectacles and the cost is 150/-")
+print("5 for watch and the cost is 120/-")
+print("6 for shoe and the cost is 300/-")
+print("7 for sliders and the cost is 350/-")
+print("8 for bag and the cost is 250/-")
+print("9 for belt and the cost is 200/-")
+while True:
+    print("select other than 1 to 9 to get total price", end='')
+    print("enter choice as integer")
+    choice = int(input("select the item:"))
+    if (choice == 1):
+        price += object1.shirt()
+    elif (choice == 2):
+        price += object1.pant()
+    elif (choice == 3):
+        price += object1.jacket()
+    elif (choice == 4):
+        price += object1.spectacles()
+    elif (choice == 5):
+        price += object1.watch()
+    elif (choice == 6):
+        price += object1.shoe()
+    elif (choice == 7):
+        price += object1.sliders()
+    elif (choice == 8):
+        price += object1.bag()
+    elif (choice == 9):
+        price += object1.belt()
+    else:
+        break
+print("The total cost is :", price)
+if(price> 0):
+    if price<= 500:
+        discount = price*0.05
+    elif price> 500 and price< 1500:
+        discount = price*0.12
+        discount = price*0.12
+    else:
+        discount = price*0.3
+    print("discount is", discount)
+    cash_to_be_paid = price-discount
+    print("cash to be paid is", cash_to_be_paid)
+    bill = open("bill.txt", "a")
+    bill.write("actual price is:")
+    bill.write(str(price)+"\n")
+    bill.write("discount given is")
+    bill.write(str(discount)+"\n")
+    bill.write("cash to be paid is:")
+    bill.write(str(cash_to_be_paid)+"\n")
+    bill.write("Thank you\n")
+    bill.write("please visit again\n")
+    bill.write("print the bill\n")
+    bill.close()
+    print("Thank you")
+    print("please visit again")
