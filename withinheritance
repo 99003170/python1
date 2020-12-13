@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
+
+
 class shop:
     def __init__(self, name=0, age=0):
         self.name = name
@@ -10,9 +12,9 @@ class shop:
         self.name = input()
         print("enter age", end='')
         self.age = input()
-        var1=re.match("[0-9]+",self.age)
+        var1 = re.match("[0-9]+", self.age)
         if(var1 is None):
-             print("please enter a valid")
+            print("please enter a valid")
         else:
             print(self.age)
         bill = open("bill.txt", "a")
@@ -115,7 +117,7 @@ class choice(menshopping):
                     choice = int(input("select the item:"))
                     break
                 except:
-                    print("That's not a valid option!")   
+                    print("That's not a valid option!")
             if (choice == 1):
                 self.price += object1.shirt()
             elif (choice == 2):
@@ -137,10 +139,10 @@ class choice(menshopping):
             else:
                 break
         print("The total cost is :", self.price)
-        if(self.price> 0):
-            if self.price<= 500:
+        if(self.price > 0):
+            if self.price <= 500:
                 discount = self.price*0.05
-            elif self.price> 500 and self.price< 1500:
+            elif self.price > 500 and self.price < 1500:
                 discount = self.price*0.12
                 discount = self.price*0.12
             else:
