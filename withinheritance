@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import re
 
 
@@ -100,18 +99,18 @@ class choice(menshopping):
         self.price = 0
 
     def select(self):
-        print("1.shirt")
-        print("2.pant")
-        print("3.jacket")
-        print("4.spectacles")
-        print("5.watch")
-        print("6.shoe")
-        print("7.sliders")
-        print("8.bag")
-        print("9.belt")
+        print("Enter 1 for shirt")
+        print("Enter 2 for pant")
+        print("Enter 3 for jacket")
+        print("Enter 4 for spectacles")
+        print("Enter 5 for watch")
+        print("Enter 6 for shoe")
+        print("Enter 7 for sliders")
+        print("Enter 8 for bag")
+        print("Enter 9 for belt")
         while True:
-            print("select other than 1 to 9 to get total price", end='')
-            print("enter choice as integer")
+            print("select other than 1 to 9 if order was completed and to get the price\n")
+            print("------------------------------------")
             while True:
                 try:
                     choice = int(input("select the item:"))
@@ -163,6 +162,7 @@ class choice(menshopping):
                 bill.close()
                 print("Thank you")
                 print("please visit again")
+print("-------------------------------------------")
 print("shirt 500/- per quantity")
 print("pant 300/- per quantity")
 print("jacket 400/- per quantity")
@@ -171,7 +171,8 @@ print("watch 120/- per quantity")
 print("shoe 300/- per quantity")
 print("sliders 350/- per quantity")
 print("bag 250/- per quantity")
-print("beltt 200/- per quantity")
+print("belt 200/- per quantity")
+print("------------------------------------------")
 print("Please select")
 object1 = menshopping()
 obj = choice()
